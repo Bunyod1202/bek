@@ -1,0 +1,70 @@
+/* sacramento-regular - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Sacramento';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/sacramento-v13-latin-regular.woff2') format('woff2'), 
+       url('../fonts/sacramento-v13-latin-regular.woff') format('woff');
+}
+
+*{
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Sacramento';
+}
+.box {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(46, 46, 255, 0.25) 0px 30px 60px -12px inset, rgba(57, 57, 255, 0.3) 0px 18px 36px -18px inset;
+}
+.card {
+  width: 500px; 
+}
+.img-box {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 100px;
+  box-shadow: rgba(37, 37, 255, 0.25) 0px 50px 100px -20px, rgba(67, 58, 255, 0.3) 0px 30px 60px -30px;
+}
+.img-box__img {
+ width: 100%;
+}
+.accaunt-box{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.accaunt-box__email {
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: bolder;
+  text-decoration: none;
+  color:#46b3e6;
+  text-shadow: #46b3e6 5px 8px 5px;
+}
+.list {
+  list-style: none;
+  padding: 0;
+}
+.list-link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: rgba(95, 41, 255, 0.1) 0px 4px 12px;
+  margin-top: 20px;
+  border-radius: 50px;
+  font-size: 25px;
+  font-weight: bolder;
+  text-decoration: none;
+  color:#46b3e6;
+}
