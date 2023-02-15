@@ -1,20 +1,30 @@
-/* sacramento-regular - latin */
 @font-face {
   font-display: swap; 
-  font-family: 'Sacramento';
+  font-family: 'Amaranth';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/sacramento-v13-latin-regular.woff2') format('woff2'), 
-       url('../fonts/sacramento-v13-latin-regular.woff') format('woff');
+  src: url('../fonts/amaranth-v18-latin-regular.woff2') format('woff2'), 
+       url('../fonts/amaranth-v18-latin-regular.woff') format('woff');
 }
-
+/* amaranth-700 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Amaranth';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/amaranth-v18-latin-700.woff2') format('woff2'), 
+       url('../fonts/amaranth-v18-latin-700.woff') format('woff');
+}
+:root {
+  --text-color: #6c6a6afe;
+}
 *{
   box-sizing: border-box;
 }
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Sacramento';
+  font-family: 'Amaranth';
 }
 .box {
   width: 100%;
@@ -48,14 +58,14 @@ body {
   font-size: 40px;
   font-weight: bolder;
   text-decoration: none;
-  color:#46b3e6;
-  text-shadow: #46b3e6 5px 8px 5px;
+  color:var(--text-color);
 }
 .list {
   list-style: none;
   padding: 0;
 }
 .list-link {
+  transition: all 0.5s linear;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -66,5 +76,37 @@ body {
   font-size: 25px;
   font-weight: bolder;
   text-decoration: none;
-  color:#46b3e6;
+  color:var(--text-color);
+  position: relative;
 }
+.list-link::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-image: url("../images/instagram.png");
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+  left: 20px;
+  top:50%;
+  transform: translateY(-50%);
+  box-shadow: rgba(255, 255, 255, 0.441) 0px 54px 55px, rgba(255, 255, 255, 0.301) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
+}
+
+.list-item:nth-child(2) .list-link::before {
+  background-image: url("../images/telegram.png");
+}
+.list-item:nth-child(3) .list-link::before {
+  background-image: url("../images/behance.png");
+}
+.list-link:hover {
+  transition: all 0.5s linear;
+  background: linear-gradient(24deg, rgba(252,183,2,1) 0%, rgba(251,0,116,1) 65%, rgba(190,9,202,1) 100%);
+  color: #fff;
+}
+.list-item:nth-child(2) .list-link:hover {
+background: #28A8EA !important;
+}
+.list-item:nth-child(3) .list-link:hover {
+  background: #0057FF !important;
+  }
